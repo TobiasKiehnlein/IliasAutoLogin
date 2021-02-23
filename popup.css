@@ -1,0 +1,57 @@
+:root {
+	--kit-color: #009682;
+	--kit-color-contrast: white;
+	--margin-default: 10px;
+	--margin-large: 20px
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+form {
+	margin: var(--margin-large);
+}
+
+label {
+	display: block;
+	color: var(--kit-color);
+}
+
+label:nth-of-type(2) {
+	margin-top: var(--margin-default);
+}
+
+header {
+	background: var(--kit-color);
+	color: var(--kit-color-contrast);
+	padding: 20px;
+	display: grid;
+	place-items: center;
+}
+
+input[type=text], input[type=password] {
+	padding: calc(var(--margin-default) / 2);
+}
+
+input[type=submit] {
+	background: var(--kit-color);
+	color: var(--kit-color-contrast);
+	margin-top: var(--margin-default);
+	padding: var(--margin-default) var(--margin-large);
+	border: none;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	filter: brightness(1.2);
+}
+
+input {
+	border-radius: calc(var(--margin-default) / 2);
+}

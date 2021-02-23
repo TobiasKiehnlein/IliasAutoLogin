@@ -1,0 +1,38 @@
+{
+	"name": "IliasAutoLogin",
+	"version": "1.0",
+	"description": "Build an Extension!",
+	"manifest_version": 2,
+	"permissions": [
+		"declarativeContent",
+		"storage",
+		"activeTab"
+	],
+	"background": {
+		"scripts": [
+			"background.js"
+		],
+		"persistent": true
+	},
+	"page_action": {
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+		{
+			"js": [
+				"login.js"
+			],
+			"matches": [
+				"https://idp.scc.kit.edu/*"
+			]
+		},
+		{
+			"js": [
+				"triggerLogin.js"
+			],
+			"matches": [
+				"https://ilias.studium.kit.edu/*"
+			]
+		}
+	]
+}
